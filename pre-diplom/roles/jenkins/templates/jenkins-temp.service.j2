@@ -1,0 +1,14 @@
+[Unit]
+Description=Start Jenkins as systemd service
+After=docker.service
+Requires=docker.service
+[Service]
+ExecStart=/usr/bin/docker run --rm -u 0 \
+--name {{ jenkins_cont_name }} \
+-p {{ jenkins_port }}:{{ jenkins_port }} \
+-v {{ jenkins_host_config_dir }}:/var/jenkins_home \
+-v /var/run/docker.sock:/var/run/docker.sock \
+{{ jenkins_docker_image }}
+ExecStop=/usr/bin/docker stop {{ jenkins_cont_name }}
+[Install]
+WantedBy=multi-user.target

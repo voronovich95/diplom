@@ -1,0 +1,11 @@
+---
+- name: Playbook for diplom - infrastructure
+  hosts: ubuntu34
+  become: true
+  roles:
+    - docker 
+    - nginx
+    - jenkins
+    - grafana
+    - prometheus  
+     

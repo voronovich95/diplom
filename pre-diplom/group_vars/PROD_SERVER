@@ -1,0 +1,29 @@
+docker_system_packeges        : ["curl", "gnupg", "ca-certificates"]
+docker_packeges               : ["docker-ce", "docker-ce-cli", "containerd.io", "docker-buildx-plugin", "docker-compose-plugin", "python3-pip", "python3-setuptools"]
+
+
+prometheus_docker_image       : "prom/prometheus:latest"
+prometheus_cont_name          : "prometheus"
+prometheus_port               : "9090"
+prometheus_host_data_dir      : "/opt/prometheus"
+
+grafana_docker_image          : "grafana/grafana:latest"
+grafana_cont_name             : "grafana"
+grafana_port                  : "3000"
+grafana_admin_user            : "admin"
+grafana_admin_password        : "grafana"
+grafana_host_config_dir       : "/opt/grafana/datasources"
+grafana_host_plugins_dir      : "/opt/grafana/plugins"
+grafana_host_data_dir         : "/opt/grafana/dashboards"
+
+nginx_docker_image            : "nginx:latest"
+nginx_cont_name               : "nginx"
+nginx_port                    : "80"
+nginx_host_config_dir         : "/opt/nginx"
+
+jenkins_docker_image          : "jenkins/jenkins:latest"
+jenkins_cont_name             : "jenkins"
+jenkins_port                  : "8080"
+jenkins_host_config_dir       : "/opt/jenkins"
+
+flush_all_env                 : "true"
