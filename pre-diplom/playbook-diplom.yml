@@ -8,4 +8,5 @@
     - jenkins
     - grafana
     - prometheus  
-     
+    - prom_docker_export 
+    - cadvisor

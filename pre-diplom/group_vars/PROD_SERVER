@@ -7,6 +7,12 @@ prometheus_cont_name          : "prometheus"
 prometheus_port               : "9090"
 prometheus_host_data_dir      : "/opt/prometheus"
 
+prometheus_docker_exp_image       : "prometheusnet/docker_exporter"
+prometheus_exp_cont_name          : "prometheus_exp"
+prometheus_exp_port               : "9417"
+prometheus_exp_host_data_dir      : "/opt/prometheus-exp"
+
+
 grafana_docker_image          : "grafana/grafana:latest"
 grafana_cont_name             : "grafana"
 grafana_port                  : "3000"
@@ -23,7 +29,9 @@ nginx_host_config_dir         : "/opt/nginx"
 
 jenkins_docker_image          : "jenkins/jenkins:latest"
 jenkins_cont_name             : "jenkins"
-jenkins_port                  : "8080"
+jenkins_port                  : "8081"
 jenkins_host_config_dir       : "/opt/jenkins"
 
-flush_all_env                 : "true"
+cadvisor_docker_image         : "gcr.io/cadvisor/cadvisor:v0.47.1"
+cadvisor_cont_name            : "cadvisor"
+cadvisor_port                 : "8080"
